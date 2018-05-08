@@ -7,7 +7,7 @@ const char* ssid = "yourssid";
 const char* password = "yourpassword";
 
 void setup() {
-  pinMode(D10, OUTPUT); 
+  pinMode(LED_BUILTIN, OUTPUT); 
   Serial.begin(115200);
   Serial.println("Booting");
   WiFi.mode(WIFI_STA);
@@ -52,8 +52,8 @@ void setup() {
 
 void loop() {
   ArduinoOTA.handle();
-  digitalWrite(D10, HIGH);   
+  digitalWrite(LED_BUILTIN, HIGH);   
   delay(500);                 
-  digitalWrite(D10, LOW);
+  digitalWrite(LED_BUILTIN, LOW);
   delay(500);
 }
